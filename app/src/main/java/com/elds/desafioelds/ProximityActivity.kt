@@ -70,13 +70,4 @@ class ProximityActivity : AppCompatActivity(), SensorEventListener{
             sensorManager.unregisterListener(this)
         }
     }
-
-    fun Fragment.vibratePhone() {
-
-        if (Build.VERSION.SDK_INT >= 26) {
-            vibrator.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE))
-        } else {
-            vibrator.vibrate(200)
-        }
-    }
 }
