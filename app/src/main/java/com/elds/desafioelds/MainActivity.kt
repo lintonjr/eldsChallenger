@@ -29,12 +29,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         proximity.setOnClickListener {
-            val intent = Intent(this, BiometricActivity::class.java)
+            val intent = Intent(this, ProximityActivity::class.java)
             startActivity(intent)
         }
 
         step.setOnClickListener {
-            val intent = Intent(this, BiometricActivity::class.java)
+            val intent = Intent(this, StepActivity::class.java)
             startActivity(intent)
         }
     }
