@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DesafioElds">
-        <activity android:name=".StepActivity"></activity>
+        <activity android:name=".StepActivity" />
         <activity android:name=".CompassActivity" />
         <activity android:name=".BiometricActivity" />
         <activity android:name=".ProximityActivity" />

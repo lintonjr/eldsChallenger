@@ -11,8 +11,6 @@ import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.widget.TextView
-import androidx.core.content.ContextCompat.getSystemService
-import androidx.fragment.app.Fragment
 
 class ProximityActivity : AppCompatActivity(), SensorEventListener{
 
@@ -20,7 +18,6 @@ class ProximityActivity : AppCompatActivity(), SensorEventListener{
     private lateinit var proximitySensor: Sensor
     private var isProximityAvailable: Boolean = false
     private lateinit var textView: TextView
-    private lateinit var vibrator: Vibrator
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

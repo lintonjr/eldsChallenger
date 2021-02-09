@@ -1,6 +1,5 @@
 package com.elds.desafioelds
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.hardware.Sensor
 import android.hardware.SensorEvent
@@ -9,7 +8,6 @@ import android.hardware.SensorManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.WindowManager
 import android.widget.TextView
 import android.widget.Toast
 import com.mikhaellopez.circularprogressbar.CircularProgressBar
@@ -22,8 +20,6 @@ class StepActivity : AppCompatActivity(), SensorEventListener {
     private var totalSteps = 0f
     private var previousTotalSteps = 0f
 
-    private lateinit var tv_steps: TextView
-    private lateinit var progress_circular: CircularProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,18 +48,18 @@ class StepActivity : AppCompatActivity(), SensorEventListener {
         if (running) {
             totalSteps = event!!.values[0]
             val currentSteps = totalSteps.toInt() - previousTotalSteps.toInt()
-            tv_steps = findViewById(R.id.tv_steps)
+            val tv_steps = findViewById<TextView>(R.id.tv_steps)
             tv_steps.text = "$currentSteps"
 
-            progress_circular = findViewById(R.id.progress_circular)
-            progress_circular.apply {
+            val pCircular = findViewById<CircularProgressBar>(R.id.progress_circular)
+            pCircular.apply {
                 setProgressWithAnimation(currentSteps.toFloat())
             }
         }
     }
 
     private fun resetSteps(){
-        tv_steps = findViewById(R.id.tv_steps)
+        val tv_steps = findViewById<TextView>(R.id.tv_steps)
         tv_steps.setOnClickListener {
             Toast.makeText(this, "Long tap to reset steps", Toast.LENGTH_SHORT).show()
         }
