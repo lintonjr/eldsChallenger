@@ -2,11 +2,12 @@ package com.elds.desafioelds
 
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 
+
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,5 +38,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, StepActivity::class.java)
             startActivity(intent)
         }
+
     }
 }
