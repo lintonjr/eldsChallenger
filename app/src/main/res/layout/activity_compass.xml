@@ -6,4 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".CompassActivity">
 
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/compassId"
+        android:src="@drawable/compass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="200dp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:id="@+id/textCompassId"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/compassId"
+        android:layout_marginTop="50dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
