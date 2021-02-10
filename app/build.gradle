@@ -9,8 +9,8 @@ android {
 
     defaultConfig {
         applicationId "com.elds.desafioelds"
-        minSdkVersion 26
-        targetSdkVersion 30
+        minSdkVersion 25
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
@@ -45,4 +45,5 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
 
     implementation 'com.mikhaellopez:circularprogressbar:3.0.3'
+    implementation "androidx.biometric:biometric-ktx:1.2.0-alpha02"
 }
